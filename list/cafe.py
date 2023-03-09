@@ -25,7 +25,7 @@ ordered=''
 replaceIndex=0
 
 while customer <= customerLimit:
-    print(f'Customer {customer+1}:\nmenu:')
+    print(f'Customer {customer+1}:\nmenu card :')
     # for loop for display the menu card to every customer
     for item in range(len(listOfItems)):
         itemsMenu=f"{listOfItems[item]} : {itemsPrice[item]} \n"
@@ -53,6 +53,7 @@ while customer <= customerLimit:
             replaceIndex = assignIndex + newPrice
             itemsSales.remove(assignIndex)
             itemsSales.insert(index,replaceIndex)
+            
 
     customer +=1
 # code to display highest sales
@@ -77,4 +78,4 @@ print("profit: ")
 for item in profit:
     if item in itemProfit:
         highProfit= itemProfit.index(item)
-        print(f"the items sold with highest profit : {listOfItems[highProfit]} : {item}")
+        print(f"The items sold with highest profit : {listOfItems[highProfit]} : {item}")
