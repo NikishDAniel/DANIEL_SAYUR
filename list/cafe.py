@@ -17,6 +17,7 @@ itemsPrice = [12,15,10,8,14]
 itemsSales = [0,0,0,0,0]
 itemProfit = [3,4,2,3,2]
 itemoredred = [0,0,0,0,0]
+klm = [0,0,0,0,0]
 customerLimit = 1
 customer = 0
 menu = ''
@@ -42,6 +43,12 @@ while customer <= customerLimit:
             # index of the ordered item
             index = listOfItems.index(order[i])
             indexOfItems = itemStock[index]
+            Profit = itemProfit[index]
+            newProfit = int(Profit)*int(ordered)
+            assignProfit = klm [index]
+            replaceProfit = assignProfit + newProfit
+            klm.remove(assignProfit)
+            klm.insert(index,replaceProfit)
             value = int(indexOfItems) - int(ordered)
             itemStock[index]= value
             itemoredred[index] = int(ordered)
@@ -53,7 +60,7 @@ while customer <= customerLimit:
             replaceIndex = assignIndex + newPrice
             itemsSales.remove(assignIndex)
             itemsSales.insert(index,replaceIndex)
-            
+            #end of items price 
 
     customer +=1
 # code to display highest sales
@@ -70,12 +77,10 @@ for j in range(len(itemStock)):
         print(f"refilling {listOfItems[j]}")
         print(f"{listOfItems[j]} adding =", itemStock[j]-itemStock[j]*0.2)
 #code for top 3 highest profit
-for i in range(len(itemProfit)):
-    itemProfit[i] *= itemoredred[i]
-profitReversed = sorted(itemProfit,reverse=True)
+profitReversed = sorted(klm,reverse=True)
 profit = profitReversed[0:3]
 print("profit: ")
 for item in profit:
-    if item in itemProfit:
-        highProfit= itemProfit.index(item)
+    if item in klm:
+        highProfit= klm.index(item)
         print(f"The items sold with highest profit : {listOfItems[highProfit]} : {item}")
