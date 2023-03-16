@@ -26,3 +26,4 @@ while customer <= customerLimit:
             ordered= order[i]
         if order [i] in listOfItems:
             pass
+            

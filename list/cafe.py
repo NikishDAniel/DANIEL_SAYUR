@@ -6,7 +6,7 @@ if the supply reaches 20% of the stock. Print the 3 items with highest sales, an
 
 '''plan:
     -- list of items , stock in morning , stock in evening
-    -- '''
+    -- setting the customer limit. '''
 
 # creating the list for the shop
 listOfItems = ['coffee','tea','biscuts','vadai','milk']
