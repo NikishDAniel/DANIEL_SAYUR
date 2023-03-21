@@ -54,7 +54,7 @@ rev = sorted(enumerated,key=lambda x:x[1],reverse=True)
 highestPrice = rev[0:3]
 print("Highest price sold items :")
 for i in highestPrice:
-    print(list(items)[i[0]])
+    print(f"{list(items)[i[0]]} : {i[1]}")
     
 for key in items:
     x=items[key]["profit"]
@@ -65,4 +65,4 @@ highestProfit = rev[0:3]
 print(highestProfit)
 print("Highest profit sold items :")
 for j in highestProfit:
-    print(list(items)[j[0]])
+    print(f'{list(items)[j[0]]}:{j[1]}')
