@@ -64,7 +64,8 @@ customer = 0
 customerLimit = 3
 for keys in items:
     menu += keys + "\n"
-'''def main():
+'''function to seperate the items ordered
+def main():
     for i in range(len(order)): 
         if order[i] in quantity:
             ordered = order[i]  
