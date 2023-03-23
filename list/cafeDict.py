@@ -8,6 +8,7 @@ if the supply reaches 20% of the stock. Print the 3 items with highest sales, an
 items = {
     "coffee" : {
         "cost":12,
+        "sto" : 45,
         "stock":45,
         "profit":3,
         "price":0,
@@ -16,6 +17,7 @@ items = {
         },
     "tea" : {
         "cost":15,
+        "sto" : 35,
         "stock":35,
         "profit":4,
         "price":0,
@@ -24,6 +26,7 @@ items = {
         },
     "vadai" : {
         "cost":6,
+        "sto" : 60,
         "stock":60,
         "profit":3,
         "price":0,
@@ -32,6 +35,7 @@ items = {
         },
     "biscuts" : {
         "cost":10,
+        "sto" : 50,
         "stock":50,
         "profit":4,
         "price":0,
@@ -40,6 +44,7 @@ items = {
         },
     "milk" : {
         "cost":12,
+        "sto" : 25,
         "stock":25,
         "profit":3,
         "price":0,
@@ -66,8 +71,8 @@ for keys in items:
 
         if order[i].isalpha():
             if order[i] != "and":
-                itemOrdered = order[i]
-                '''
+                itemOrdered = order[i]'''
+                
 # to create a loop to check the condition that the customer less or equal to customer limit
 while customer<=customerLimit:
     print(f'Customer {customer+1}:\nmenu card :')
@@ -76,6 +81,7 @@ while customer<=customerLimit:
     customerOrdered = input("What do you want?")
     order = customerOrdered.split()
     #seperating the quantity and items that are ordered
+    #main(order)
     for i in range(len(order)): 
         if order[i] in quantity:
             ordered = order[i]  
@@ -83,16 +89,21 @@ while customer<=customerLimit:
         if order[i].isalpha():
             if order[i] != "and":
                 itemOrdered = order[i]
+                #sto = items[itemOrdered]["sto"]
                 stock = items[itemOrdered]['stock']
-                if stock < stock*0.2:
+                newStock = int(stock)-int(ordered)
+                if newStock < stock*0.2:
+                    sto = int(items[itemOrdered]["sto"])
+                    add = int(sto - stock*0.2)
                     print(f"Refilling {itemOrdered}")
+                    print(f"Adding {add} stock of {itemOrdered}")
+                    newStock += add
                 cost = items[itemOrdered]['cost']
                 
                 profit = items[itemOrdered]['profit']
                 newProfit = int(profit)*int(ordered)
                 enumerated = items[itemOrdered]['profitNew']
                 enumerated += newProfit  
-                newStock = int(stock)-int(ordered)
                 amount = int(ordered)*int(cost)
                 newPrices = items[itemOrdered]['price']
                 newPrices += amount
