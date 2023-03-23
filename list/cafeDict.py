@@ -12,8 +12,7 @@ items = {
         "stock":45,
         "profit":3,
         "price":0,
-        "profitNew":0,
-        "refill":100
+        "profitNew":0
         },
     "tea" : {
         "cost":15,
@@ -21,8 +20,7 @@ items = {
         "stock":35,
         "profit":4,
         "price":0,
-        "profitNew":0,
-        "refill":100
+        "profitNew":0
         },
     "vadai" : {
         "cost":6,
@@ -30,8 +28,7 @@ items = {
         "stock":60,
         "profit":3,
         "price":0,
-        "profitNew":0,
-        "refill":100
+        "profitNew":0
         },
     "biscuts" : {
         "cost":10,
@@ -39,8 +36,7 @@ items = {
         "stock":50,
         "profit":4,
         "price":0,
-        "profitNew":0,
-        "refill":100
+        "profitNew":0
         },
     "milk" : {
         "cost":12,
@@ -48,8 +44,7 @@ items = {
         "stock":25,
         "profit":3,
         "price":0,
-        "profitNew":0,
-        "refill":100
+        "profitNew":0
         }
 }
 menu = ''
@@ -62,18 +57,9 @@ quantity = ['1','2','3','4','5','6','7','8','9']
 customer = 0
 #setting the customer limit 
 customerLimit = 3
-for keys in items:
-    menu += keys + "\n"
-'''function to seperate the items ordered
-def main():
-    for i in range(len(order)): 
-        if order[i] in quantity:
-            ordered = order[i]  
 
-        if order[i].isalpha():
-            if order[i] != "and":
-                itemOrdered = order[i]'''
-                
+for keys in items:
+    menu += keys + "\n"              
 # to create a loop to check the condition that the customer less or equal to customer limit
 while customer<=customerLimit:
     print(f'Customer {customer+1}:\nmenu card :')
@@ -81,6 +67,7 @@ while customer<=customerLimit:
     # getting input from customer
     customerOrdered = input("What do you want?")
     order = customerOrdered.split()
+    main(order)
     #seperating the quantity and items that are ordered
     #main(order)
     for i in range(len(order)): 
