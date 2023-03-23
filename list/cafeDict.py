@@ -6,11 +6,46 @@ if the supply reaches 20% of the stock. Print the 3 items with highest sales, an
 
 # creating dictionary items and necessary key value pair
 items = {
-    "coffee" : {"cost":12,"stock":45,"profit":3,"price":0,"profitNew":0,"refill":100},
-    "tea" : {"cost":15,"stock":35,"profit":4,"price":0,"profitNew":0,"refill":100},
-    "vadai" : {"cost":6,"stock":60,"profit":3,"price":0,"profitNew":0,"refill":100},
-    "biscuts" : {"cost":10,"stock":50,"profit":4,"price":0,"profitNew":0,"refill":100},
-    "milk" : {"cost":12,"stock":25,"profit":3,"price":0,"profitNew":0,"refill":100}
+    "coffee" : {
+        "cost":12,
+        "stock":45,
+        "profit":3,
+        "price":0,
+        "profitNew":0,
+        "refill":100
+        },
+    "tea" : {
+        "cost":15,
+        "stock":35,
+        "profit":4,
+        "price":0,
+        "profitNew":0,
+        "refill":100
+        },
+    "vadai" : {
+        "cost":6,
+        "stock":60,
+        "profit":3,
+        "price":0,
+        "profitNew":0,
+        "refill":100
+        },
+    "biscuts" : {
+        "cost":10,
+        "stock":50,
+        "profit":4,
+        "price":0,
+        "profitNew":0,
+        "refill":100
+        },
+    "milk" : {
+        "cost":12,
+        "stock":25,
+        "profit":3,
+        "price":0,
+        "profitNew":0,
+        "refill":100
+        }
 }
 menu = ''
 #creating two empyt list so that we can calculate the top three highest profit and price 
@@ -21,26 +56,38 @@ quantity = ['1','2','3','4','5','6','7','8','9']
 #initialize the customer to 0
 customer = 0
 #setting the customer limit 
-custLimit = 1
-
-# to create a loop to check the condition that the customer less or equal to customer limit
-while customer<=custLimit:
-    print(f'Customer {customer+1}:\nmenu card :')
-    for keys in items:
-        print(keys)
-
-    customerOrdered = input("What do you want?")
-    order = customerOrdered.split()
-
-    for i in range(len(order)):
+customerLimit = 3
+for keys in items:
+    menu += keys + "\n"
+'''def main():
+    for i in range(len(order)): 
         if order[i] in quantity:
-            ordered= order[i]
+            ordered = order[i]  
 
         if order[i].isalpha():
             if order[i] != "and":
                 itemOrdered = order[i]
-                cost = items[itemOrdered]['cost']
+                '''
+# to create a loop to check the condition that the customer less or equal to customer limit
+while customer<=customerLimit:
+    print(f'Customer {customer+1}:\nmenu card :')
+    print(menu)
+    # getting input from customer
+    customerOrdered = input("What do you want?")
+    order = customerOrdered.split()
+    #seperating the quantity and items that are ordered
+    for i in range(len(order)): 
+        if order[i] in quantity:
+            ordered = order[i]  
+
+        if order[i].isalpha():
+            if order[i] != "and":
+                itemOrdered = order[i]
                 stock = items[itemOrdered]['stock']
+                if stock < stock*0.2:
+                    print(f"Refilling {itemOrdered}")
+                cost = items[itemOrdered]['cost']
+                
                 profit = items[itemOrdered]['profit']
                 newProfit = int(profit)*int(ordered)
                 enumerated = items[itemOrdered]['profitNew']
@@ -60,12 +107,13 @@ for key in items:
 enumerated=list(enumerate(priceList))
 rev = sorted(enumerated,key=lambda x:x[1],reverse=True)
 highestPrice = rev[0:3]
+print(highestPrice)
 print("Highest price sold items :")
 for i in highestPrice:
     print(f"{list(items)[i[0]]} : {i[1]}")
     
 for key in items:
-    x=items[key]["profit"]
+    x=items[key]["profitNew"]
     profitList.append(x)
 enumerated=list(enumerate(profitList))
 rev = sorted(enumerated,key=lambda x:x[1],reverse=True)
