@@ -51,6 +51,7 @@ menu = ''
 #creating two empyt list so that we can calculate the top three highest profit and price 
 priceList = []
 profitList = []
+totalPrice = 0
 #creating the list for taking the quantity of the items
 quantity = ['1','2','3','4','5','6','7','8','9']
 #initialize the customer to 0
@@ -67,27 +68,24 @@ while customer<=customerLimit:
     # getting input from customer
     customerOrdered = input("What do you want?")
     order = customerOrdered.split()
-    main(order)
     #seperating the quantity and items that are ordered
-    #main(order)
     for i in range(len(order)): 
         if order[i] in quantity:
             ordered = order[i]  
-
+        # getting the items
         if order[i].isalpha():
             if order[i] != "and":
                 itemOrdered = order[i]
-                #sto = items[itemOrdered]["sto"]
                 stock = items[itemOrdered]['stock']
                 newStock = int(stock)-int(ordered)
+                # checking for the stock
                 if newStock < stock*0.2:
-                    sto = int(items[itemOrdered]["sto"])
-                    add = int(sto - stock*0.2)
+                    stockNew = int(items[itemOrdered]["sto"])
+                    add = int(stockNew - stock*0.2)
                     print(f"Refilling {itemOrdered}")
                     print(f"Adding {add} stock of {itemOrdered}")
                     newStock += add
                 cost = items[itemOrdered]['cost']
-                
                 profit = items[itemOrdered]['profit']
                 newProfit = int(profit)*int(ordered)
                 enumerated = items[itemOrdered]['profitNew']
@@ -98,8 +96,9 @@ while customer<=customerLimit:
                 items[itemOrdered]["price"]=newPrices
                 items[itemOrdered]["stock"]=newStock
                 items[itemOrdered]["profitNew"]=enumerated
-    customer += 1
+    customer += 1    
 print(items)
+
 for key in items:
     x=items[key]["price"]
     priceList.append(x)
@@ -121,3 +120,6 @@ print(highestProfit)
 print("Highest profit sold items :")
 for j in highestProfit:
     print(f'{list(items)[j[0]]}:{j[1]}')
+
+
+
