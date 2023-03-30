@@ -1,8 +1,7 @@
-'''Use lists
-1. Write an app for a cafe. Decide on the items in the cafe, stock of each item in the morning, 
-stock in the evening, sales amount at the end of the day and profit for each item. You need to restock an item 
-if the supply reaches 20% of the stock. Print the 3 items with highest sales, and top 3 highest profit.
-'''
+''' 2. Extension of Cafe  
+2.1Replenish supply for every 5 customers  and at the end of the day
+2.2 Calculate replenish supply at the starting of the day for hot items,
+every 5 customers for all items and only cold items at the every end of the day.'''
 
 # creating dictionary items and necessary key value pair
 items = {
@@ -13,7 +12,7 @@ items = {
         "profit":3,
         "price":0,
         "profitNew":0,
-        
+        "hot item":1
         },
     "tea" : {
         "cost":15,
@@ -21,7 +20,8 @@ items = {
         "stock":35,
         "profit":4,
         "price":0,
-        "profitNew":0
+        "profitNew":0,
+        "hot item":1
         },
     "vadai" : {
         "cost":6,
@@ -29,7 +29,8 @@ items = {
         "stock":60,
         "profit":3,
         "price":0,
-        "profitNew":0
+        "profitNew":0,
+        "hot item":1
         },
     "biscuts" : {
         "cost":10,
@@ -37,7 +38,8 @@ items = {
         "stock":50,
         "profit":4,
         "price":0,
-        "profitNew":0
+        "profitNew":0,
+        "hot item ": 0
         },
     "milk" : {
         "cost":12,
@@ -45,31 +47,37 @@ items = {
         "stock":25,
         "profit":3,
         "price":0,
-        "profitNew":0
+        "profitNew":0,
+        "hot item":1
         }
 }
-
-def replenish(items):
-    for item in items.keys():
-        items[item]["stock"]=items[item]["sto"]
-    return items 
-        
-
+#initializing the customer and customer limit 
 menu = ''
 #creating two empyt list so that we can calculate the top three highest profit and price 
-priceList = []
-profitList = []
+"""priceList = []
+profitList = []"""
 totalPrice = 0
+totalRelpenishHot = 0
+totalRelpenishCold = 0
 #creating the list for taking the quantity of the items
 quantity = ['1','2','3','4','5','6','7','8','9']
 #initialize the customer to 0
 customer = 0
 #setting the customer limit 
 customerLimit = 5
+# defining the function for items replenish
+def replenish(items):
+    for item in items.keys():
+        items[item]["stock"]=items[item]["sto"]
+    return items
+# defining the function for hot items replenish
+def replenishHot(add):
+    hotVal = 
 
-for keys in items:
-    menu += keys + "\n"              
-# to create a loop to check the condition that the customer less or equal to customer limit
+
+def replenishCold():
+
+#checking for 
 while customer<=customerLimit:
     print(f'Customer {customer+1}:\nmenu card :')
     print(menu)
@@ -87,12 +95,19 @@ while customer<=customerLimit:
                 stock = items[itemOrdered]['stock']
                 newStock = int(stock)-int(ordered)
                 # checking for the stock
-                if newStock < stock*0.2:
-                    stockNew = int(items[itemOrdered]["sto"])
-                    add = int(stockNew - stock*0.2)
-                    print(f"Refilling {itemOrdered}")
-                    print(f"Adding {add} stock of {itemOrdered}")
-                    newStock += add
+                if customer > 5:
+                    if items[itemOrdered]["hot items"] == 1:
+                        stockNew = int(items[itemOrdered]["sto"])
+                        hotStock = int(stockNew - 5)
+                        print(f"Refilling {itemOrdered}")
+                        print(f"Adding {hotStock } stock of {itemOrdered}")
+                        totalRelpenishHot +=hotStock 
+                    if items[itemOrdered]["hot items"] == 0:
+                        stockNew = int(items[itemOrdered]["sto"])
+                        coldStock = int(stockNew - 5)
+                        print(f"Refilling {itemOrdered}")
+                        print(f"Adding {coldStock} stock of {itemOrdered}")
+                        totalRelpenishCold += coldStock
                 cost = items[itemOrdered]['cost']
                 profit = items[itemOrdered]['profit']
                 newProfit = int(profit)*int(ordered)
@@ -105,30 +120,4 @@ while customer<=customerLimit:
                 items[itemOrdered]["stock"]=newStock
                 items[itemOrdered]["profitNew"]=enumerated
     customer += 1
-    
-items = replenish(items)
-print(items)
-for key in items:
-    x=items[key]["price"]
-    priceList.append(x)
-enumerated=list(enumerate(priceList))
-rev = sorted(enumerated,key=lambda x:x[1],reverse=True)
-highestPrice = rev[0:3]
-print(highestPrice)
-print("Highest price sold items :")
-for i in highestPrice:
-    print(f"{list(items)[i[0]]} : {i[1]}")
-    
-for key in items:
-    x=items[key]["profitNew"]
-    profitList.append(x)
-enumerated=list(enumerate(profitList))
-rev = sorted(enumerated,key=lambda x:x[1],reverse=True)
-highestProfit = rev[0:3]
-print(highestProfit)
-print("Highest profit sold items :")
-for j in highestProfit:
-    print(f'{list(items)[j[0]]}:{j[1]}')
-
-
-
+     

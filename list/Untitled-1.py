@@ -37,3 +37,7 @@ print(a,type(a))
 '''
 list:
     '''
+
+string = "apple"
+for i in ['a','b','c']:
+    print(i)
