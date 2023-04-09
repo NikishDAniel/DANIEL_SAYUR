@@ -49,10 +49,10 @@ items = {
         }
 }
 
-def replenish(items):
+"""def replenish(items):
     for item in items.keys():
         items[item]["stock"]=items[item]["sto"]
-    return items 
+    return items""" 
         
 
 menu = ''
@@ -106,7 +106,7 @@ while customer<=customerLimit:
                 items[itemOrdered]["profitNew"]=enumerated
     customer += 1
     
-items = replenish(items)
+"""items = replenish(items)"""
 print(items)
 for key in items:
     x=items[key]["price"]
@@ -129,6 +129,3 @@ print(highestProfit)
 print("Highest profit sold items :")
 for j in highestProfit:
     print(f'{list(items)[j[0]]}:{j[1]}')
-
-
-

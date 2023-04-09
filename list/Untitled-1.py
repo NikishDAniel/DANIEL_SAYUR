@@ -24,7 +24,7 @@ movieSales = {
         "profitNew":0}
    
 } 
-print(movieSales.items())
+
 '''  
 #print(movieSales.keys())
 print(movieSales.values())
@@ -34,10 +34,3 @@ print(sorted(movieSales.items()))
 a = sorted(movieSales.items(),key =lambda x:x[1]['profit'],reverse=True)[:3] 
 print(a,type(a))
 
-'''
-list:
-    '''
-
-string = "apple"
-for i in ['a','b','c']:
-    print(i)

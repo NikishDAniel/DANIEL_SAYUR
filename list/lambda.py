@@ -4,7 +4,6 @@ itemsPrice = [12,15,10,8,14]
 itemsSales = [0,0,0,0,0]
 itemProfit = [3,4,2,3,2]
 quantity = ['1','2','3','4','5','6','7','8','9']
-print(list(enumerate(listOfItems)))
 print(list(enumerate(itemStock)))
 print(list(enumerate(itemProfit)))
 print(list(enumerate(itemsPrice)))
@@ -25,5 +24,8 @@ while customer <= customerLimit:
         if order [i] in quantity:
             ordered= order[i]
         if order [i] in listOfItems:
-            pass
-            
+            itemsOrdered = order[i]
+            itemEnumerated = list(enumerate(listOfItems))
+            if itemEnumerated[1] == itemsOrdered:
+                print(itemEnumerated[i])
+    customer += 1
