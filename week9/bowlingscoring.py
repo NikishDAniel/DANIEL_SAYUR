@@ -1,5 +1,7 @@
 '''plan 
-    -- input two chances'''
+    -- input two chances
+    -- funtions : strike , spare, two roll , roll , main
+    '''
     
 def spare(totalRoll):
     oneChance = int(input())
