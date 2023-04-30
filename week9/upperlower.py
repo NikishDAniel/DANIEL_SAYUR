@@ -17,20 +17,19 @@ def countOf(returning):
     elif returning is False:
         lowerCount += 1
 # this function is to return whether true or false based on the condition
-def order(i):
-    findOrd = ord(i)
-    if findOrd in range(ord("A"),ord("Z")+1):
+def check(i):
+    if i.isupper():
         return True
-    elif findOrd in range(ord("a"),ord("z")+1):
+    elif i.islower():
         return False
 # this is the main function that takes input and calls other functions
 def main(message):
     string = message.replace(" ","")
     for i in string:
-        returning = order(i)
+        returning = check(i)
         countOf(returning)
 # function call to main function   
-main(input())
+main(input("Enter the input string: "))
 # printing both the values
 print("Upper case letters count :",upperCount)
 print("Lower case letters count :",lowerCount)
