@@ -26,10 +26,10 @@ def roll():
         totalRoll = firstRoll+secondRoll
         if totalRoll == 10:
             totalPoint = spare(totalRoll)
-            return totalPoint
+            #
         elif totalRoll < 10:
             totalPoint = totalRoll
-            return totalPoint
+            #return totalPoint
         else:
             roll()
     else:
@@ -38,7 +38,7 @@ def roll():
     
 def main():
     totalPoints = 0
-    for i in range(12):
+    for i in range(11):
         totalPoints +=roll()
     return totalPoints
 output = main()
