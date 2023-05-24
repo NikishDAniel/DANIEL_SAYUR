@@ -1,4 +1,3 @@
-
 ######## Problem 2 ###############
 # Computer will guess a random number. 
 # user has to guess that number. for each guess, print 'High' or 'Low'
@@ -11,7 +10,7 @@
 import random
 computerNo = random.randint(3, 9)
 
-attempt = 0
+attempt = 1
 while(True):
     userNo = int(input("Enter your guess number : "))
     if userNo == computerNo:

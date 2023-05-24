@@ -1,5 +1,5 @@
-'''#write code for both for and while loop
-#Get marks from 5  students and calculate avg'''
+#write code for both for and while loop
+#Get marks from 5  students and calculate avg
 #
 def average():
 #for loop

@@ -11,11 +11,3 @@ for num1 in range(number1,number2+1):
   for num2 in range(1,numberOfRows+1):
     multiplication(num1,num2)
   print(end="-------------------\n")
-#main
-
-
-######## Problem  3 ###############
-#Print Chess board (alternate black and white squares)
-#print('\u25A0') - will print white Square. You can use "B" to print black squares
-
-
