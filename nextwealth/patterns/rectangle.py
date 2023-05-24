@@ -11,7 +11,9 @@ Row 5, col 7
 * * * * * * *
 
 '''
-def rectangle(row,column):
+#defining the function
+def drawPattern(row,column):
+    #looping through 
     for i in range(row):
         if i == 0 or i == (row-1):
             print("* "*column)
@@ -19,4 +21,4 @@ def rectangle(row,column):
             print("* "+" "*(column-2)*2+"*")
         
 row , column = int(input("Enter the number of rows : ")) , int(input("Enter the number of column : "))
-rectangle(row,column)  
+drawPattern(row,column)  

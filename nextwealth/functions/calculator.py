@@ -26,7 +26,8 @@ def divide(numerator, denominator):
 
 #Get 5 marks from student and find the total
 total = 0
-numberOfSubjects = 5       
+numberOfSubjects = 5  
+#looping through the each subjects     
 for i in range(1,numberOfSubjects+1):
     mark = int(input(f"Enter mark {i}: "))
     total = addTwoNumbers(total,mark)
