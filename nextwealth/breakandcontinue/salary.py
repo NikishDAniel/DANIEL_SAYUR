@@ -13,49 +13,55 @@ for month, phoneCount in enumerate(monthlySalesList):
     print (f"This month's salary before additional bonus {currentMonthSalary}") 
     # checking for bonus
     if (phoneCount >= 5):
-        count = abs(phoneCount/5)
-        bonus = count*5000
+        count1 = int(phoneCount/5)
+        bonus = count1*5000
         # checking for phonecount greater than 5
         if (phoneCount > 5):
-            count = phoneCount - 5
-            bonus = count*1100
+            count2 = phoneCount - 5
+            bonus += count2*1100
     # in first month there is no previous month salary
     if month == 0:
         previousMonthSalary = 0
     
     # if salesman's salary is more than Rs20000 in the previous month and sells 20 or more phones he gets additional Rs5000.
-    if (previousMonthSalary > 20000 or phoneCount >=20):
+    if (previousMonthSalary > 20000 and phoneCount >=20):
         currentMonthSalary += 5000 
         
     #else continue
     if(phoneCount < 20):
         previousMonthSalary = currentMonthSalary 
-        continue 
+        #continue 
     
     #calculate the new salary
-    currentMonthSalary +=  bonus 
+    currentMonthSalary += bonus 
     print(f"This month's salary after additional bonus {currentMonthSalary}")
     previousMonthSalary = currentMonthSalary 
     
 '''
 output --
 This month's salary before additional bonus 10000
+This month's salary after additional bonus 15000
 This month's salary before additional bonus 10000
-This month's salary after additional bonus 34800 
+This month's salary after additional bonus 49800
 This month's salary before additional bonus 10000
-This month's salary after additional bonus 32600 
+This month's salary after additional bonus 52600
 This month's salary before additional bonus 10000
+This month's salary after additional bonus 29900
 This month's salary before additional bonus 10000
-This month's salary after additional bonus 34800 
+This month's salary after additional bonus 54800
 This month's salary before additional bonus 10000
+This month's salary after additional bonus 27700
 This month's salary before additional bonus 10000
+This month's salary after additional bonus 27700
 This month's salary before additional bonus 10000
+This month's salary after additional bonus 27700
 This month's salary before additional bonus 10000
-This month's salary after additional bonus 33700 
+This month's salary after additional bonus 53700
 This month's salary before additional bonus 10000
-This month's salary after additional bonus 33700 
+This month's salary after additional bonus 53700
 This month's salary before additional bonus 10000
-This month's salary after additional bonus 46900
+This month's salary after additional bonus 76900
 This month's salary before additional bonus 10000
+This month's salary after additional bonus 27700
 
 '''
