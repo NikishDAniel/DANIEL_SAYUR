@@ -47,3 +47,15 @@ salesPerMonth = multiplyTwoNumbers(total,4)
 print(f"Total sales per month : ",salesPerMonth)
 #calculate profit.
 print(f'Profit is :', subtractAfromB(salesPerMonth,employeeSalary))
+
+
+'''
+output --
+The total sales is 548 , and its their average is 78.28571428571429 
+The total sales is 1770 , and its their average is 252.85714285714286 
+The total sales is 446 , and its their average is 63.714285714285715
+the total sales per week is 2764
+Total sales per month :  11056
+Profit is : 10556
+
+'''

@@ -33,3 +33,12 @@ for i in subMarks:
     totalAverage = addTwoNumbers(dividedOutput,totalAverage)
 overAllAvg = divide(totalAverage,len(subMarks))
 print("the total average : ", overAllAvg)
+
+'''
+output --
+The average is : 65.0
+The average is : 68.2
+The average is : 62.2
+the total average :  65.13333333333333
+
+'''

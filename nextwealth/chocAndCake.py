@@ -7,21 +7,20 @@
 
 noOfCake = 0
 noOfChoc = 0
-#get budget
-#FillinMissingCode
+#getting budget
 money = float(input("Enter the budget : "))
+
+# looping through the money 
 while (money >= 150) : 
     if (money >= 200) :
-        #buy choc
         noOfChoc += 1
         money -= 200
-    elif (money >= 150):
+    if (money >= 150):
         noOfCake += 1
         money -= 150
-    
-    #FillinMissingCode for buying cake
-
-
-#print no of cakes and choc
 print(f'number of cakes bougth {noOfCake} and number of choc bought {noOfChoc}')
-#FillinMissingCode
+
+
+'''output 
+Enter the budget : 1500
+number of cakes bougth 4 and number of choc bought 4'''

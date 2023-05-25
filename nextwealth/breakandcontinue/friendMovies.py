@@ -4,25 +4,64 @@
 #Print "You both like "name of the color"
 #Continue until they is atleast 3 movies they both like
 
-#init variables
+
+# friend number diaplay
+print("Friend 1: ")
 movies = input("What movies you like ? ")
-#convert movies into a List
-moviesList = movies.split()
-#FillinMissingCode
+moviesList = movies.split()         # converting the input into list
 commonMovieCount = 0
+
+# looping until there is a break occurs
 while (True) :
-    #ask the second friend for one movie at a time
+    print("Friend 2: ")
+    #asking input from the second friend
     movie = input("What movie you like? ")
     #Check if this movie is in the movie list
     if movie in moviesList:
-    #FillinMissingCode
         print(f"You both like {movie}")
         commonMovieCount += 1
-    #if present, 
-    #check if we reached the max
+        #checking if we reach the limit
         if(commonMovieCount >= 3):
             break
     else:
         print ("Try again")
 
-print () #FillinMissingCode - list all the common movies
+
+'''
+output  1 --
+Friend 1: 
+What movies you like ? kgf kgf2 avengers shazam vaarisu beast
+Friend 2: 
+What movie you like? kgf
+You both like kgf    
+Friend 2: 
+What movie you like? 3
+Try again
+Friend 2: 
+What movie you like? kgf2
+You both like kgf2   
+Friend 2: 
+What movie you like? kee
+Try again
+Friend 2: 
+What movie you like? vaarisu
+You both like vaarisu
+'''
+
+
+
+'''
+output 2 --
+Friend 1: 
+What movies you like ?  kgf kgf2 avengers shazam vaarisu beast
+Friend 2: 
+What movie you like? kgf
+You both like kgf    
+Friend 2: 
+What movie you like? kgf2
+You both like kgf2   
+Friend 2: 
+What movie you like? beast
+You both like beast
+
+'''

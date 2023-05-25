@@ -2,15 +2,45 @@
 #Write a program that prints out a diamond shape using #.
 # Hint - print(5 * "$") will print  - $$$$$
 # Hint - print(5* "$ ") will print  - $ $ $ $ $
-n = int(input("Enter the number of rows: "))
+numberOfRows = int(input("Enter the number of rows: "))
 
 #print the top triangle
-for i in range(n):
-    print(" "*(n-i-1) + "# "*(i+1)) 
-    if i == (n-1):
-        for i in range(n-1):
-            print(" "*(i+1) + "# "*(n-i-1))
+for row in range(numberOfRows):
+    print(" "*(numberOfRows-row-1) + "# "*(row+1)) 
+    # if the loop i is comes to the row 
+    if row == (numberOfRows-1):
+        for row in range(numberOfRows-1):
+            print(" "*(row+1) + "# "*(numberOfRows-row-1))
 #FillinMissingCode for drawing the bottom triangle
 
+'''
+output 1 --
+Enter the number of rows: 5
+    #
+   # #
+  # # #
+ # # # #
+# # # # #
+ # # # #
+  # # #
+   # #
+    #
+'''
 
-
+'''
+output 2 --
+Enter the number of rows: 7
+      # 
+     # #
+    # # #
+   # # # #
+  # # # # #
+ # # # # # #
+# # # # # # #
+ # # # # # #
+  # # # # #
+   # # # #
+    # # #
+     # #
+      #
+'''

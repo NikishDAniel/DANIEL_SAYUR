@@ -9,10 +9,15 @@ pigLatinKey = 'ay'
 for word in inputSentence.split(): #gets the word in a sentence
     #take the first char
     firstChar = word[0]
-     #FillinMissingCode - check if the word has more than one char
     if len(word)==1:
         word = word[0]+pigLatinKey
     else:
         word = word[1:] + firstChar + pigLatinKey
     print(word,end = ' ')
         
+'''output -- 
+
+Enter the input string : I am Python
+Iay maay ythonPay
+
+'''

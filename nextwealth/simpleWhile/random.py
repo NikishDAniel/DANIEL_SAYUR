@@ -11,8 +11,11 @@ import random
 computerNo = random.randint(3, 9)
 
 attempt = 1
+
+#looping until the correct number is found
 while(True):
     userNo = int(input("Enter your guess number : "))
+    # conditions that prints the values
     if userNo == computerNo:
         break
     elif computerNo < userNo:
@@ -22,3 +25,7 @@ while(True):
     attempt +=1
 
 print ("User guessed the number in ", attempt, "attempts")
+
+'''output --
+
+'''
