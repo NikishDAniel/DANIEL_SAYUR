@@ -1,6 +1,6 @@
-openFile = open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/fibbo.py","r")
-with open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/fibbo.py") as opened: 
-    newFile = open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/new.txt","w")
+openFile = open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/fileHandling/file.py","r")
+with open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/fileHandling/file.py") as opened: 
+    newFile = open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/fileHandling/new.txt","w")
     count = 0
     for lines in opened:
         countOfChar = 0
