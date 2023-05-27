@@ -10,17 +10,15 @@ def drawingEmptyDiamond(lines):
         
         # conditions for the first row and no spaces
         elif i >= 3 or i <=lines-3:
-            print(" "*(lines-i-1)+"# "+" "*(i-3+2)*2+"# ")
+            print(" "*(lines-i-1)+"# "+" "*(i-3+2)*2+"#")
         # lower part of the diamond
-        if i == (lines-1):
-            #looping for the bottom values 
-            for i in range(lines-1):
-                # if i is less than there will be spaces
-                if i < lines-3:
-                    print(" "*(i+1)+"# "+"  "*(lines-i-3)+"# ")
-                # else no spaces
-                elif i > lines-(lines-1):
-                    print(" "*(i+1) + "# "*(lines-i-1))
+    for i in range(lines-1):
+        # if i is less than there will be spaces
+        if i < lines-3:
+            print(" "*(i+1)+"# "+"  "*(lines-i-3)+"#")
+        # else no spaces
+        elif i > lines-(lines-1):
+            print(" "*(i+1) + "# "*(lines-i-1))
 #function call
 drawingEmptyDiamond(lines=int(input("Enter the number of lines : ")))
 

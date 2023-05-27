@@ -46,10 +46,10 @@ students = []
 numberOfSubjects = 2
 studentsCount = 0    
 for student in range (3):
-    studentName = input()
+    studentName = input("Enter your name here :")
     students.append(studentName)
     for mark in range (numberOfSubjects):
-        inputMark = int(input())
+        inputMark = int(input(f"Enter your mark {mark} : "))
         studentsMarks.append(inputMark)
 for aStudent in students:
     stir = ''

@@ -15,12 +15,9 @@
 # a function to print first row of x
 def printX():
   for i in range(startNumber,endNumber+1):
-    if i == startNumber:
-      print(f'    {i}',end=" ")
-    else:
-      print( i,end = "  ")
+      print(f'\t{i}',end=" ")
   print()
-  print(f" ***************"+2*i*'*')
+  print(f"**********"*i)
 
 startNumber = int(input("Enter the starting number : "))
 endNumber = int(input("Enter the ending number : "))
@@ -32,9 +29,9 @@ for i in range(2):
         for j in range(startNumber,endNumber+1):
             mul = i*j
             if j== startNumber:
-                print(f'{i} | {mul}',end = ' ')
+                print(f'{i} |\t{mul}',end = ' ')
             else:
-                print(f'{mul}',end = ' ')
+                print(f'\t{mul}',end = ' ')
         print()
 
 
