@@ -17,11 +17,7 @@ for num1 in range(number1,number2+1):
     multiplication(num1,num2)
   print(end="-------------------\n")
   
-'''output -- 
-PS C:\Users\Nikish daniel\Desktop\DANIEL_SAYUR> & "C:/Users/Nikish daniel/AppData/Local/Programs/Python/Python311/python.exe" "c:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/nestedLoops/multiplication.py"
-Enter the first number : 7
-Enter the second number : 16
-Enter the row number :12
+'''
 7 x 1 = 7
 7 x 2 = 14
 7 x 3 = 21
@@ -151,4 +147,46 @@ Enter the row number :12
 16 x 10 = 160
 16 x 11 = 176
 16 x 12 = 192
+-------------------
+'''
+
+
+
+'''
+output 2 --
+Enter the first number : 5
+Enter the second number : 5
+Enter the row number :12
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+5 x 5 = 25
+5 x 6 = 30
+5 x 7 = 35
+5 x 8 = 40
+5 x 9 = 45
+5 x 10 = 50
+5 x 11 = 55
+5 x 12 = 60
+-------------------'''
+
+
+
+'''
+output 3 ---
+Enter the first number : 1
+Enter the second number : 3
+Enter the row number :3
+1 x 1 = 1
+1 x 2 = 2
+1 x 3 = 3
+-------------------
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+-------------------
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
 -------------------'''

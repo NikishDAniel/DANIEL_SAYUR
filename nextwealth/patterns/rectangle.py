@@ -50,3 +50,21 @@ Enter the number of column : 9
 *               *
 * * * * * * * * *
 '''
+
+
+'''
+output 3 --
+Enter the number of rows : 10
+Enter the number of column : 10
+* * * * * * * * * * 
+*                 *
+*                 *
+*                 *
+*                 *
+*                 *
+*                 *
+*                 *
+*                 *
+* * * * * * * * * * 
+
+'''
