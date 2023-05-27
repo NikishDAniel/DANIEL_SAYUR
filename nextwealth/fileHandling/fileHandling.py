@@ -10,4 +10,5 @@ with open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/fibbo.py") as 
         newFile.write(f"Line {count} contains {countOfChar} count of words \n")
     newFile.write(f"\ntotal Lines = {count}")
 openFile.close()
+
 newFile.close()
