@@ -29,8 +29,9 @@ for month, phoneCount in enumerate(monthlySalesList):
         
     #else continue
     if(phoneCount < 20):
-        previousMonthSalary = currentMonthSalary 
-        #continue 
+        print(f"This month's salary after additional bonus {currentMonthSalary}") 
+        previousMonthSalary = currentMonthSalary       
+        continue 
     
     #calculate the new salary
     currentMonthSalary += bonus 
@@ -39,29 +40,5 @@ for month, phoneCount in enumerate(monthlySalesList):
     
 '''
 output --
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 15000
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 49800
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 52600
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 29900
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 54800
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 27700
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 27700
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 27700
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 53700
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 53700
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 76900
-This month's salary before additional bonus 10000
-This month's salary after additional bonus 27700
 
 '''
