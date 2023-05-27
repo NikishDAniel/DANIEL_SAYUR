@@ -59,3 +59,24 @@ Enter the number of lines : 10
         # #
          #
 '''
+
+'''
+output 3 ---
+l/Desktop/DANIEL_SAYUR/nextwealth/patterns/emptyDiamond.py"
+Enter the number of lines : 8
+       #        
+      # #       
+     #   #      
+    #     #     
+   #       #    
+  #         #   
+ #           #  
+#             # 
+ #           #  
+  #         #   
+   #       #    
+    #     #     
+     #   #      
+      # #       
+       #    
+'''
