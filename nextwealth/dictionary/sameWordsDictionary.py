@@ -1,7 +1,7 @@
 ########## Program 1
 #find the list unique words in a sentence
 #hint - Each word is a key, count is the value
-'''
+
 sentence = "This is a cat and it has a tail and two eyes".replace(" ",'')
 visited = []
 sameDict = {}
@@ -21,7 +21,7 @@ for keys in sameDict:
     print(f'The same word {keys} occurs {sameDict[keys]+1} times.')
     
     
-    
+'''    
 output -- 
 
 The same word i occurs 4 times.

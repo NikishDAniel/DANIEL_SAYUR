@@ -23,7 +23,6 @@ Also , print the employee who sold most phones in all 4 months added.
 
 '''
 
-dict1 = { }
 
 filr = open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/nestedLoops2/sample.txt","r")
 with open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/nestedLoops2/sample.txt") as opened:
@@ -31,8 +30,8 @@ with open("C:/Users/Nikish daniel/Desktop/DANIEL_SAYUR/nextwealth/nestedLoops2/s
         line = line.split()
         for i in range(len(line)):
             if i>0 and line[i].isalpha():
-                dict1[i] = 0
+                
             elif i > 0 and line[i].isnumeric():
-                dict1[i] = i
+               
             else:
                 continue
