@@ -41,3 +41,39 @@ Constraints:
 1 <= s.length <= 15
 s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 It is guaranteed that s is a valid roman numeral in the range [1, 3999].'''
+
+class Solution:
+    
+    def romanToInt(self, s: str) -> int:
+        romanDictionary = {
+                    'I' : 1,
+                    'V' : 5,
+                    'X' : 10,
+                    'L' : 50,
+                    'C' : 100,
+                    'D' : 500,
+                    'M' : 1000
+                    }
+        def calculate(number):
+            total = number[0]
+            for i in range(len(number)-1):
+                if number[i] == number[i+1]:
+                    total += number[i]
+                elif number[i] < number[i+1]:
+                    total += number[i+1]
+                else:
+                    total -= number[i+1]
+            return total
+
+        def getnumber(inp):
+            return romanDictionary[inp]
+        roman = s.upper().replace('',' ')
+        inp = roman.split()
+        number = list(map(getnumber,inp))
+        number = list(reversed(number))
+        if len(number)== 1:
+            return number[0]
+        else:
+            return calculate(number)
+
+        
