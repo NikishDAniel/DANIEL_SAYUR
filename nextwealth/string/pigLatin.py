@@ -35,6 +35,7 @@ for word in inputSentence.split(): #gets the word in a sentence
             else: 
                 first = word[index+1]              
                 words = first + words[0:]+char+pigLatinKey
+                break
          #FillinMissingCode - check if the char is vowel or not
         #
     print(words,end=' ')

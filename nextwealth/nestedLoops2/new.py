@@ -15,19 +15,9 @@ Sam - ...
 Sara - ...
 
 '''
-dicti = {
-        "(":")",
-        '[':']',
-        '{':'}',
-        ")":"(",
-        ']':'[',
-        '}':'{'
-    }
-s = input()
-new = s.replace('',' ').split()
-for chara in new:
-    if dicti[chara] not in new:
-        print('false')
-        break
-    elif dicti[chara] in new and new.count(chara) == new.count(dicti[chara]):
-        print('true')
+employeeList = []
+numberOfEmployees = int(input("Enter the number of employees : "))
+for employee in range(1,numberOfEmployees+1):
+    inputNames = input(f"Enter the name of employee number {numberOfEmployees} : ")
+    employeeList.append(inputNames)
+    

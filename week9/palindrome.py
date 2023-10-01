@@ -3,7 +3,7 @@ inputString =str(inputString)
 reverse = ''.join(reversed(inputString)) 
 if reverse == inputString:
     print("yes")'''
-def printing():
+'''def printing():'''
     
 # checkmatch function   
 def checkmatch(inputString,i,firstLetter):
