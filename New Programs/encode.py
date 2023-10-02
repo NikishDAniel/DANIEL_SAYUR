@@ -7,3 +7,4 @@ Eg - Key 2, input sentence "I am the King"
 Output K oc vjg ipkM'''
 
 message = input()
+key = int(input())
