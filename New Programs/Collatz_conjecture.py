@@ -11,16 +11,23 @@ Get two numbers as input. Print the number that has less number of steps to reac
 
 '''
 
+# defining a function 
 def collatz(number):
+    #initializing a variable to get the steps 
     count = 0
+    # loop until the number not equal to 1 
     while number!=1:
+        # checking odd or even
         if number%2==0:
             number=int(number/2)
         else:
             number=(3*number)+1
         count+=1
         #print(number,end=' ')
+    #print()
     return count
-n = int(input("Enter the numbers:"))
+
+#taking input for the number of inputs 
+n = int(input("Enter the number of inputs : "))
 resultList = [collatz(int(input(f'Enter the number {i}: '))) for i in range(1,n+1)]
 print(f'The number that has less number of steps to reach 1 is number ""{resultList.index(min(resultList))+1}"" input number..')
